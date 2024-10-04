@@ -73,7 +73,7 @@ namespace caf
         double theta;                                       //!< Angle of the neutrino interaction.
         std::string topology;                               //!< Topology of the interaction (e.g. "0g0e1mu0pi2p") considering only primaries.
         int64_t track_id;                                   //!< Track ID of the neutrino interaction.
-        //char * units;                                       //!< Units in which the position coordinates are expressed.
+	std::string units;                                  //!< Units in which the position coordinates are expressed.
         std::array<float, 3> vertex;                        //!< Vertex of the interaction in detector coordinates (truth).
 
         std::vector<SRParticleTruthDLP> particles;          //!< Particles in the interaction.

@@ -52,7 +52,8 @@ namespace caf
         theta(std::numeric_limits<double>::signaling_NaN()),
         topology(),
         track_id(std::numeric_limits<int64_t>::signaling_NaN()),
-        vertex({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
+        units(),
+        vertex{std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()},
         particles(std::vector<SRParticleTruthDLP>()) { }
 
     SRInteractionTruthDLP::~SRInteractionTruthDLP() { }

@@ -30,9 +30,9 @@ namespace caf
         double csda_ke;                                     //!< Continuous-slowing-down-approximation kinetic energy.
         std::array<float, 3> end_dir;                       //!< Unit direction vector calculated at the particle end point.
         std::array<float, 3> end_point;                     //!< End point (vector) of the particle.
-        std::vector<int32_t> fragment_ids;                  //!< Fragment IDs comprising the particle.
+        std::vector<int64_t> fragment_ids;                  //!< Fragment IDs comprising the particle.
         int64_t id;                                         //!< Particle ID.
-        //std::vector<int64_t> index;                         //!< List of coordinate indices that comprise the particle.
+        std::vector<int64_t> index;                         //!< List of coordinate indices that comprise the particle.
         int64_t interaction_id;                             //!< Parent interaction ID.
         bool is_cathode_crosser;                            //!< Whether the particle is a cathode-crosser.
         bool is_contained;                                  //!< Whether the particle is contained.
@@ -47,16 +47,18 @@ namespace caf
         double mcs_ke;                                      //!< Multiple Coulomb scattering kinetic energy.
         std::vector<float> module_ids;                      //!< Module IDs of the particle.
         std::array<float, 3> momentum;                      //!< Momentum (vector) of the particle.
+	int64_t num_fragments;                              //!< TO DO.
         float p;                                            //!< Momentum magnitude.
         int64_t pdg_code;                                   //!< PDG code of the particle.
-        int64_t pid;                                          //!< Particle ID (see Pid_t enumeration).
+        int64_t pid;                                        //!< Particle ID (see Pid_t enumeration).
         std::array<float, 5> pid_scores;                    //!< PID softmax scores.
         std::vector<int32_t> ppn_ids;                       //!< PPN IDs of the particle.
         std::array<float, 2> primary_scores;                //!< Primary softmax scores.
         int64_t shape;                                      //!< Semantic type of the particle (see Shape_t enumeration).
+	int64_t size;                                       //!< TO DO.
         std::array<float, 3> start_dir;                     //!< Unit direction vector calculated at the particle start point.
         std::array<float, 3> start_point;                   //!< Start point (vector) of the particle.
-        //std::string units;                                  //!< Units in which the position coordinates are expressed.
+        std::string units;                                  //!< Units in which the position coordinates are expressed.
   };
 } // namespace caf
 #endif // SRPARTICLEDLP_H

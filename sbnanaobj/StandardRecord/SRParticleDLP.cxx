@@ -18,6 +18,7 @@ namespace caf
         end_point({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
         fragment_ids(),
         id(std::numeric_limits<int64_t>::signaling_NaN()),
+        index(),
         interaction_id(std::numeric_limits<int64_t>::signaling_NaN()),
         is_cathode_crosser(false),
         is_contained(false),
@@ -32,15 +33,18 @@ namespace caf
         mcs_ke(std::numeric_limits<double>::signaling_NaN()),
         module_ids(),
         momentum({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
+        num_fragments(std::numeric_limits<int64_t>::signaling_NaN()),
         p(std::numeric_limits<float>::signaling_NaN()),
         pdg_code(std::numeric_limits<int64_t>::signaling_NaN()),
-        pid(kUnknown),
+        pid(-1),
         pid_scores(),
         ppn_ids(),
         primary_scores(),
-        shape(kUnknown),
+        shape(-1),
+        size(std::numeric_limits<int64_t>::signaling_NaN()),
         start_dir({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
-        start_point({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}) { }
+        start_point({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
+        units() { }
 
     SRParticleDLP::~SRParticleDLP() { }
 } // namespace caf

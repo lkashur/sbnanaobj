@@ -32,7 +32,7 @@ namespace caf
         double flash_time;                                  //!< Time of the matched flash.
         double flash_total_pe;                              //!< Total PE of the matched flash.
         int64_t id;                                         //!< Interaction ID.
-        //std::vector<int64_t> index;                         //!< List of coordinate indices that comprise the interaction.
+        std::vector<int64_t> index;                         //!< List of coordinate indices that comprise the interaction.
         bool is_cathode_crosser;                            //!< Whether the interaction is a cathode-crosser.
         bool is_contained;                                  //!< Whether the interaction is contained.
         bool is_fiducial;                                   //!< Whether the interaction has an interaction in the fiducial volume.
@@ -41,7 +41,8 @@ namespace caf
         bool is_truth;                                      //!< Whether the interaction is a truth interaction.
         std::vector<int64_t> match_ids;                     //!< Interaction IDs of the considered matches (correspond to true interactions).
         std::vector<float> match_overlaps;                  //!< Intersection over union (IoU) of the considered matches.
-        std::vector<float> module_ids;                      //!< Module IDs of the interaction.
+        std::vector<int32_t> module_ids;                    //!< Module IDs of the interaction.
+	int64_t nu_id;                                      //!< TO DO.
         std::vector<int64_t> particle_ids;                  //!< Particle IDs in the interaction.
         std::string topology;                               //!< Topology of the interaction (e.g. "0g0e1mu0pi2p") considering only primaries.
         std::string units;                                  //!< Units in which the position coordinates are expressed.
