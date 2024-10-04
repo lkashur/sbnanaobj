@@ -28,6 +28,7 @@ namespace caf
         double calo_ke;                                     //!< Calorimetric kinetic energy.
         double cathode_offset;                              //!< Distance from the cathode.
         double csda_ke;                                     //!< Continuous-slowing-down-approximation kinetic energy.
+	double depositions_sum;                             //!< TO DO.
         std::array<float, 3> end_dir;                       //!< Unit direction vector calculated at the particle end point.
         std::array<float, 3> end_point;                     //!< End point (vector) of the particle.
         std::vector<int64_t> fragment_ids;                  //!< Fragment IDs comprising the particle.
@@ -42,6 +43,7 @@ namespace caf
         bool is_valid;                                      //!< Whether the particle passes thresholds and counts towards the topology.
         double ke;                                          //!< Kinetic energy according to the assumed best energy estimator (CSDA, calorimetric, or MCS).
         double length;                                      //!< Length of the particle.
+	double mass;                                        //!< TO DO.
         std::vector<int64_t> match_ids;                     //!< Match ID.
         std::vector<float> match_overlaps;                  //!< Match overlap.
         double mcs_ke;                                      //!< Multiple Coulomb scattering kinetic energy.
