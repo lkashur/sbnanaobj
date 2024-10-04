@@ -35,8 +35,8 @@ namespace caf
         lepton_p(std::numeric_limits<double>::signaling_NaN()),
         lepton_pdg_code(std::numeric_limits<int64_t>::signaling_NaN()),
         lepton_track_id(std::numeric_limits<int64_t>::signaling_NaN()),
-        mct_index(std::numeric_limits<int64_t>::signaling_NaN()) { }
-        module_ids(),
+        mct_index(std::numeric_limits<int64_t>::signaling_NaN()),
+        module_ids(std::vector<int32_t>()),
         momentum({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
         momentum_transfer(std::numeric_limits<double>::signaling_NaN()),
         momentum_transfer_mag(std::numeric_limits<double>::signaling_NaN()),
@@ -53,5 +53,7 @@ namespace caf
         topology(),
         track_id(std::numeric_limits<int64_t>::signaling_NaN()),
         vertex({std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN(), std::numeric_limits<float>::signaling_NaN()}),
-        particles(std::vector<SRParticleTruthDLP) { }
+        particles(std::vector<SRParticleTruthDLP>()) { }
+
+    SRInteractionTruthDLP::~SRInteractionTruthDLP() { }
 } // namespace caf

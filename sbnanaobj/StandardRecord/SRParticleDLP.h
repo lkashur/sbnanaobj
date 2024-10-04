@@ -7,6 +7,7 @@
 #define SRPARTICLEDLP_H
 
 #include <vector>
+#include <array>
 #include <stdint.h>
 #include <string>
 
@@ -48,11 +49,11 @@ namespace caf
         std::array<float, 3> momentum;                      //!< Momentum (vector) of the particle.
         float p;                                            //!< Momentum magnitude.
         int64_t pdg_code;                                   //!< PDG code of the particle.
-        Pid_t pid;                                          //!< Particle ID (see Pid_t enumeration).
+        int64_t pid;                                          //!< Particle ID (see Pid_t enumeration).
         std::array<float, 5> pid_scores;                    //!< PID softmax scores.
         std::vector<int32_t> ppn_ids;                       //!< PPN IDs of the particle.
         std::array<float, 2> primary_scores;                //!< Primary softmax scores.
-        Shape_t shape;                                      //!< Semantic type of the particle (see Shape_t enumeration).
+        int64_t shape;                                      //!< Semantic type of the particle (see Shape_t enumeration).
         std::array<float, 3> start_dir;                     //!< Unit direction vector calculated at the particle start point.
         std::array<float, 3> start_point;                   //!< Start point (vector) of the particle.
         //std::string units;                                  //!< Units in which the position coordinates are expressed.
