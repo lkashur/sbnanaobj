@@ -47,7 +47,7 @@ namespace caf
         std::vector<int64_t> match_ids;                     //!< Match ID.
         std::vector<float> match_overlaps;                  //!< Match overlap.
         double mcs_ke;                                      //!< Multiple Coulomb scattering kinetic energy.
-        std::vector<float> module_ids;                      //!< Module IDs of the particle.
+        std::vector<int64_t> module_ids;                      //!< Module IDs of the particle.
         std::array<float, 3> momentum;                      //!< Momentum (vector) of the particle.
 	int64_t num_fragments;                              //!< TO DO.
         float p;                                            //!< Momentum magnitude.
