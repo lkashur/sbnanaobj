@@ -53,7 +53,7 @@ namespace caf
         float p;                                            //!< Momentum magnitude.
         int64_t pdg_code;                                   //!< PDG code of the particle.
         int64_t pid;                                        //!< Particle ID (see Pid_t enumeration).
-        std::array<float, 5> pid_scores;                    //!< PID softmax scores.
+        std::array<float, 6> pid_scores;                    //!< PID softmax scores.
         std::vector<int32_t> ppn_ids;                       //!< PPN IDs of the particle.
         std::array<float, 2> primary_scores;                //!< Primary softmax scores.
         int64_t shape;                                      //!< Semantic type of the particle (see Shape_t enumeration).
