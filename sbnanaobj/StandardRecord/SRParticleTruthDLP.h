@@ -32,10 +32,10 @@ namespace caf
     double cathode_offset;                 //!<
     std::string creation_process;          //!<
     double csda_ke;                        //!<
-    double depositions_adapt_sum;          //!<
-    double depositions_adapt_q_sum;        //!<
-    double depositions_g4_sum;             //!<
-    double depositions_sum;                //!<
+    float depositions_adapt_sum;           //!<
+    float depositions_adapt_q_sum;         //!<
+    int64_t depositions_g4_sum;            //!<
+    float depositions_sum;                 //!<
     double depositions_q_sum;              //!<
     double distance_travel;                //!<
     std::array<float, 3> end_dir;          //!<
