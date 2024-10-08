@@ -28,10 +28,10 @@ namespace caf
         double calo_ke;                                     //!< Calorimetric kinetic energy.
         double cathode_offset;                              //!< Distance from the cathode.
         double csda_ke;                                     //!< Continuous-slowing-down-approximation kinetic energy.
-	double depositions_sum;                             //!< TO DO.
+	float depositions_sum;                              //!< TO DO.
         std::array<float, 3> end_dir;                       //!< Unit direction vector calculated at the particle end point.
         std::array<float, 3> end_point;                     //!< End point (vector) of the particle.
-        std::vector<int64_t> fragment_ids;                  //!< Fragment IDs comprising the particle.
+        std::vector<int32_t> fragment_ids;                  //!< Fragment IDs comprising the particle.
         int64_t id;                                         //!< Particle ID.
         std::vector<int64_t> index;                         //!< List of coordinate indices that comprise the particle.
         int64_t interaction_id;                             //!< Parent interaction ID.
